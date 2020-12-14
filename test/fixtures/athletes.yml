@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  fur_color: MyString
+  personality: MyString
+  partner: MyString
+  image: MyString
+  team: one
+
+two:
+  name: MyString
+  fur_color: MyString
+  personality: MyString
+  partner: MyString
+  image: MyString
+  team: two
