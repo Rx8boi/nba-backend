@@ -3,8 +3,12 @@ class AthletesController < ApplicationController
 
   # GET /athletes
   def index
+    if params[:team_id]
+      @team = Team.find(params[:team_id])
+      @athletes = @team.athlete
+    else
     @athletes = Athlete.all
-
+    end
     render json: @athletes
   end
 
@@ -46,6 +50,6 @@ class AthletesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def athlete_params
-      params.require(:athlete).permit(:name, :fur_color, :personality, :partner, :image, :team_id)
+      params.require(:athlete).permit(:name, :injured, :fantasy_points, :position, :image, :team_id)
     end
 end
